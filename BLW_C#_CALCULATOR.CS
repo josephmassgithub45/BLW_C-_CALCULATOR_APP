@@ -14,104 +14,104 @@ namespace Calculator
 
         private void button4_Click(object sender, EventArgs e)
         {
-            textBox1.Clear();
+            output.Clear();
             count = 0;
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void zero_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 0;
+            output.Text = output.Text + 0;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void output_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void point_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + ".";
+            output.Text = output.Text + ".";
         }
 
 
-        private void button10_Click(object sender, EventArgs e)
+        private void one_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 1;
+            output.Text = output.Text + 1;
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void two_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 2;
+            output.Text = output.Text + 2;
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void three_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 3;
+            output.Text = output.Text + 3;
         }
 
         
 
-        private void button11_Click(object sender, EventArgs e)
+        private void four_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 4;
+            output.Text = output.Text + 4;
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void five_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 5;
+            output.Text = output.Text + 5;
         }
 
-        private void button15_Click(object sender, EventArgs e)
+        private void six_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 6;
+            output.Text = output.Text + 6;
         }
 
-        private void button12_Click(object sender, EventArgs e)
+        private void seven_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 7;
+            output.Text = output.Text + 7;
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void eight_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 8;
+            output.Text = output.Text + 8;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void nine_Click(object sender, EventArgs e)
         {
-            textBox1.Text = textBox1.Text + 9;
+            output.Text = output.Text + 9;
         }
 
-        private void button18_Click(object sender, EventArgs e)
+        private void times_Click(object sender, EventArgs e)
         {
-            num1 = float.Parse(textBox1.Text);
-            textBox1.Clear();
-            textBox1.Focus();
+            num1 = float.Parse(output.Text);
+            output.Clear();
+            output.Focus();
             count = 3;
         }
-        private void button19_Click(object sender, EventArgs e)
+        private void plus_Click(object sender, EventArgs e)
         {
-            num1 = float.Parse(textBox1.Text);
-            textBox1.Clear();
-            textBox1.Focus();
+            num1 = float.Parse(output.Text);
+            output.Clear();
+            output.Focus();
             count = 2;
         }
 
-        private void button20_Click(object sender, EventArgs e)
+        private void minus_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "")
+            if (output.Text != "")
             {
-                num1 = float.Parse(textBox1.Text);
-                textBox1.Clear();
-                textBox1.Focus();
+                num1 = float.Parse(output.Text);
+                output.Clear();
+                output.Focus();
                 count = 1;
             }
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void divide_Click(object sender, EventArgs e)
         {
-            num1 = float.Parse(textBox1.Text);
-            textBox1.Clear();
-            textBox1.Focus();
+            num1 = float.Parse(output.Text);
+            output.Clear();
+            output.Focus();
             count = 4;
         }
 
@@ -120,27 +120,27 @@ namespace Calculator
             switch (count)
             {
                 case 1:
-                    ans = num1 - float.Parse(textBox1.Text);
-                    textBox1.Text = ans.ToString();
+                    ans = num1 - float.Parse(output.Text);
+                    output.Text = ans.ToString();
                     break;
                 case 2:
-                    ans = num1 + float.Parse(textBox1.Text);
-                    textBox1.Text = ans.ToString();
+                    ans = num1 + float.Parse(output.Text);
+                    output.Text = ans.ToString();
                     break;
                 case 3:
-                    ans = num1 * float.Parse(textBox1.Text);
-                    textBox1.Text = ans.ToString();
+                    ans = num1 * float.Parse(output.Text);
+                    output.Text = ans.ToString();
                     break;
                 case 4:
-                    ans = num1 / float.Parse(textBox1.Text);
-                    textBox1.Text = ans.ToString();
+                    ans = num1 / float.Parse(output.Text);
+                    output.Text = ans.ToString();
                     break;
                 default:
                     break;
             }
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void equals_Click(object sender, EventArgs e)
         {
             compute(count);
         }
