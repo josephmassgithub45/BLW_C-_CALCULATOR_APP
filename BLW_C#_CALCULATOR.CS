@@ -10,9 +10,9 @@ namespace Calculator
         float num1, ans;
         int count;
 
-        
 
-        private void button4_Click(object sender, EventArgs e)
+
+        private void clear_Click(object sender, EventArgs e)
         {
             output.Clear();
             count = 0;
@@ -49,7 +49,7 @@ namespace Calculator
             output.Text = output.Text + 3;
         }
 
-        
+
 
         private void four_Click(object sender, EventArgs e)
         {
@@ -145,5 +145,9 @@ namespace Calculator
             compute(count);
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MaximizeBox = false;
+        }
     }
 }
